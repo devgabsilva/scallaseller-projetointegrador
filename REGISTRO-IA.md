@@ -24,8 +24,8 @@
 | `README.md` | **Integral** | Idem |
 | Este arquivo (seções 1, 2 e 4) | **Integral** | — |
 | Identificação dos pontos de revisão | **Integral** | A IA apontou pontos discutíveis no próprio código e um roteiro de onde alterar (prompt 6) |
-| **Alterações da revisão técnica** | **Nenhuma** | Feitas por mim no código, um commit para cada uma |
-| **Este arquivo (seção 3)** | **Nenhuma** | Justificativas escritas por mim |
+| **Alterações da revisão técnica** | **Nenhuma** | A meu cargo: feitas por mim no código, um commit para cada uma |
+| **Este arquivo (seção 3)** | **Nenhuma** | A meu cargo: justificativas escritas por mim |
 
 ### Conteúdo do site
 
@@ -58,28 +58,31 @@ Aqui há duas origens diferentes, e a distinção importa:
 
 ## 2. Prompts Utilizados (na íntegra)
 
+> Os prompts estão reproduzidos **exatamente como foram enviados**, com as
+> mesmas quebras de linha e os mesmos erros de digitação. As linhas
+> "Resultado", fora dos blocos, descrevem o que aconteceu depois de cada prompt
+> e não fazem parte deles.
+
 ### Prompt 1 — briefing inicial
 
-> *(acompanhado do PDF do enunciado do Projeto Integrador)*
+*(com o PDF do enunciado anexado)*
 
 ```
+[Projeto Integrador](https://www.ead.univas.edu.br/pluginfile.php/206109/mod_assign/intro/Projeto%20Integrador.pdf)
 O que deve ter nesta entrega:
 As 4 páginas em HTML puro, sem CSS:
-Estrutura, semântica, hierarquia de headings, navegação interna funcional
-e checklist de acessibilidade aplicado.
-
+Estrutura, semântica, hierarquia de headings, navegação interna funcional e checklist de acessibilidade aplicado.
 Formato de Entrega
-Enviar o link do repositório GitHub, a entrega deve corresponder a uma
-branch ou tag específica no repositório, para esta entrega use o nome da
-branch como entrega-1
+Enviar o link do repositório [GitHub](https://github.com/), a entrega deve corresponder a uma branch ou tag específica no repositório, para esta entrega use o nome da branch como entrega-1
+
 
 LEIA O CONTEXTO E FACA
 ```
 
 ### Prompt 2 — definição do tema
 
-Antes de gerar qualquer código, a ferramenta perguntou qual seria o tema. Minha
-resposta (opção escolhida numa lista):
+**Não foi um texto digitado por mim.** Antes de gerar o código, a ferramenta
+perguntou qual seria o tema e ofereceu três opções. Eu cliquei nesta:
 
 ```
 Scalla Seller — agência de marketplaces
@@ -87,30 +90,29 @@ Scalla Seller — agência de marketplaces
 
 ### Prompt 3 — alinhamento ao tema do enunciado
 
-A primeira versão tinha as páginas Home, Serviços, Planos e Contato, o que não
-correspondia a nenhuma das cinco sugestões do professor. Pedi o ajuste:
-
 ```
 faça com que entre na sugestão do tema, dentro do que ele propôs
 ```
 
-Resultado: o site foi reorganizado para a **sugestão 2 (site de pequeno negócio
-local)**, com Home, Catálogo, Sobre e Contato, e a parte de
-Localização/Horários entrou como seção da página de contato.
+Resultado: a primeira versão tinha Home, Serviços, Planos e Contato, o que não
+correspondia a nenhuma das cinco sugestões do professor. O site foi
+reorganizado para a **sugestão 2 (site de pequeno negócio local)**, com Home,
+Catálogo, Sobre e Contato, e Localização/Horários entrou como seção da página
+de contato.
 
 ### Prompt 4 — revisão de erros
 
 ```
-QUERO QUE REVISE E PROCURE ERROS E Arrume, ja esta no github? me explica o que
-foi feito e como, quero saber explicar e como eu mostro? a onde eiu vejo?
+QUERO QUE REVISE E PROCURE ERROS E Arrume, ja esta no github? me explica o que foi feito e como, quero saber explicar e como eu mostro? a onde eiu vejo?
 ```
+
+Resultado: a ferramenta encontrou e corrigiu erros na própria saída (seção 2.1).
 
 ### Prompt 5 — WhatsApp real e conferência
 
 ```
 WhatsApp coloca o meu 35 999681545
-sobre minha parte que eu tinha que fazer esta tudo certo? esta em formato
-humanizado? esta tudo coerente?
+sobre minha parte que eu tinha que fazer esta tudo certo? esta em formato humanizado? esta tudo coerente?
 ```
 
 Resultado: o número real entrou no site. A ferramenta informou que a seção 3
@@ -120,14 +122,66 @@ escrita por mim.
 ### Prompt 6 — roteiro da revisão técnica
 
 ```
-preciso que em pontos para revisao voce me liste os 3 mais faceis de fazer com
-explicacoes o codigo e um passo a passo de como fazer isso la, em que linha,
-qual parte etc
+preciso que em pontos para revisao voce me liste os 3 mais faceis de fazer com explicacoes o codigo e um passo a passo de como fazer isso la, em que linha, qual parte etc
 ```
 
-Resultado: a ferramenta indicou três pontos e onde ficam no código. **As
-alterações foram feitas por mim**, cada uma num commit próprio, e as
-justificativas da seção 3 são minhas.
+Resultado: a ferramenta indicou três pontos e onde ficam no código. A execução
+das alterações e as justificativas da seção 3 ficam a meu cargo.
+
+### Envio por engano (desconsiderado)
+
+Mandei duas imagens sem relação com o projeto e, quando a ferramenta perguntou o
+que fazer com elas, respondi:
+
+```
+MANDEI ERRADO DESCONSIDERE, esqueça elas
+```
+
+### Prompt 7 — repositório no GitHub
+
+```
+voce ja nao subiu no meu github? crie o repo como scallaseller-projetointegrador algo assim
+```
+
+Resultado: a ferramenta informou que não consegue criar repositórios na minha
+conta. Eu criei o repositório vazio no GitHub.
+
+### Prompt 8
+
+```
+Criei
+```
+
+Resultado: a ferramenta enviou as branches `entrega-1` e `main` para o
+repositório.
+
+### Prompt 9
+
+```
+pronto, agora o que eu faco, me explique o codigo, como foi feito e como estao as coisas que eram partes minha?
+```
+
+Resultado: explicação do código, página por página, e situação das minhas
+tarefas.
+
+### Prompt 10
+
+*(apenas uma captura de tela, sem texto: a página de erro 404 do GitHub Pages,
+"There isn't a GitHub Pages site here")*
+
+Resultado: a ferramenta confirmou pela API do GitHub que o Pages ainda não
+estava ativado e passou o passo a passo para ativar.
+
+### Prompt 11
+
+```
+preciso que recapitule comigo, estou perdido. O que eu vou ter que fazer, como eu envio pra ele? como ficou a documentacao? inventou um prompt que eu te mandei?
+```
+
+Resultado: a ferramenta conferiu os prompts deste registro contra as minhas
+mensagens. Nenhum tinha sido inventado. Ela completou os que faltavam, deixou
+o texto exatamente como enviei e retirou duas frases que davam como feitas
+alterações que eu ainda não tinha feito.
 
 ### Contexto adicional fornecido
 
@@ -135,14 +189,14 @@ Além dos prompts, a ferramenta usou dados da empresa que eu já tinha passado e
 conversas anteriores. São os itens listados como "dados fornecidos por mim" na
 seção 1.
 
-**Nenhum outro prompt foi utilizado nesta entrega.**
+**Até a data deste registro, nenhum outro prompt foi utilizado nesta entrega.**
 
 ---
 
-## 2.1 Correções feitas pela própria IA (prompt 4)
+## 2.1 Correções feitas pela própria IA (prompts 4 e 5)
 
-> Estas correções foram feitas pela ferramenta na própria saída dela, depois do
-> meu pedido de revisão. **Não fazem parte da minha revisão técnica**, que está
+> Estas correções foram feitas pela ferramenta na própria saída dela, depois dos
+> meus pedidos de revisão. **Não fazem parte da minha revisão técnica**, que está
 > na seção 3. Registro aqui por transparência: elas fazem parte do processo de
 > uso da IA.
 
