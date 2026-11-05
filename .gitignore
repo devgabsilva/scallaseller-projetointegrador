@@ -1,0 +1,11 @@
+# Arquivo de trabalho pessoal, não faz parte da entrega
+PONTOS-PARA-REVISAO.md
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
