@@ -23,7 +23,9 @@
 | `img/*.png` | **Integral** | Imagens provisórias geradas por script Python (Pillow) |
 | `README.md` | **Integral** | Idem |
 | Este arquivo (seções 1, 2 e 4) | **Integral** | — |
-| **Este arquivo (seção 3)** | **Nenhuma** | Revisão técnica feita pelo aluno |
+| Identificação dos pontos de revisão | **Integral** | A IA apontou pontos discutíveis no próprio código e um roteiro de onde alterar (prompt 6) |
+| **Alterações da revisão técnica** | **Nenhuma** | Feitas por mim no código, um commit para cada uma |
+| **Este arquivo (seção 3)** | **Nenhuma** | Justificativas escritas por mim |
 
 ### Conteúdo do site
 
@@ -38,18 +40,19 @@ Aqui há duas origens diferentes, e a distinção importa:
 - Todos os preços das tabelas.
 - Condições: sem limite de SKUs; verba de Ads paga pelo cliente.
 - Público: CNPJ de qualquer nicho, já vendendo ou começando.
+- WhatsApp de contato: (35) 99968-1545.
 
 **Redigido pela IA, a ser confirmado por mim antes de o site ir ao ar de verdade:**
 - Todo o texto corrido (a redação das frases, não os fatos acima).
+- O detalhamento das listas "O que entra" de cada serviço, no catálogo.
 - Localização em Borda da Mata e horário de segunda a sexta, das 8h às 18h.
-- Relatório periódico de acompanhamento para o cliente.
+- Relatório mensal de acompanhamento para o cliente.
 - Itens de "O que não está incluso" além da verba de Ads (logística, estoque e
   atendimento ao comprador final).
 - Os números do painel ilustrativo (R$ 184 mil, 2.431 pedidos, ACOS de 9,4%),
   que são **fictícios** e estão identificados assim na própria página.
-- **Dados de contato provisórios:** o e-mail `contato@scallaseller.com.br` e o
-  número de WhatsApp são exemplos. O número usa DDD 00, que não existe, para não
-  apontar para uma pessoa real.
+- **E-mail provisório:** `contato@scallaseller.com.br` é um exemplo até a
+  agência ter o endereço oficial.
 
 ---
 
@@ -102,6 +105,30 @@ QUERO QUE REVISE E PROCURE ERROS E Arrume, ja esta no github? me explica o que
 foi feito e como, quero saber explicar e como eu mostro? a onde eiu vejo?
 ```
 
+### Prompt 5 — WhatsApp real e conferência
+
+```
+WhatsApp coloca o meu 35 999681545
+sobre minha parte que eu tinha que fazer esta tudo certo? esta em formato
+humanizado? esta tudo coerente?
+```
+
+Resultado: o número real entrou no site. A ferramenta informou que a seção 3
+ainda estava em branco e **se recusou a redigi-la**, porque ela precisa ser
+escrita por mim.
+
+### Prompt 6 — roteiro da revisão técnica
+
+```
+preciso que em pontos para revisao voce me liste os 3 mais faceis de fazer com
+explicacoes o codigo e um passo a passo de como fazer isso la, em que linha,
+qual parte etc
+```
+
+Resultado: a ferramenta indicou três pontos e onde ficam no código. **As
+alterações foram feitas por mim**, cada uma num commit próprio, e as
+justificativas da seção 3 são minhas.
+
 ### Contexto adicional fornecido
 
 Além dos prompts, a ferramenta usou dados da empresa que eu já tinha passado em
@@ -131,6 +158,8 @@ seção 1.
 | 8 | Texto das imagens sem acentuação ("Gestao", "Evolucao") | Imagens geradas de novo, com acento |
 | 9 | Este registro listava arquivos que não existiam mais, não tinha os prompts 3 e 4 e afirmava que a IA não tinha participado do conteúdo de negócio | Registro reescrito |
 | 10 | Cada pergunta do FAQ estava num `<article>` sem heading. O W3C acusava "Article lacks heading", sinal de over-tagging | O `<article>` passou a envolver o FAQ inteiro, que tem título próprio e faz sentido fora da página |
+| 11 | A home ainda descrevia os canais com detalhes inventados ("Full", "programa de frete"), que já tinham saído da página Sobre | Texto da home igualado ao da página Sobre |
+| 12 | O README citava uma seção "princípios" que não existia mais | README corrigido |
 
 ### Autoria dos commits
 

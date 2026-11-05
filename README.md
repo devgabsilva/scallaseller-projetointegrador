@@ -42,7 +42,7 @@ todo presente, agrupado onde o usuário naturalmente o procura.
 .
 ├── index.html       Home — o que fazemos, para quem é, o que o cliente acompanha
 ├── catalogo.html    Catálogo — os dois serviços, tabelas de preços e condições
-├── sobre.html       Sobre — quem conduz as contas, método 360, canais, princípios
+├── sobre.html       Sobre — quem conduz as contas, método 360 e canais
 ├── contato.html     Contato — formulário, localização e horários, canais, FAQ
 ├── img/
 │   ├── logo-scalla-seller.png   Logotipo (placeholder, alt descritivo)
@@ -81,10 +81,10 @@ Entrega 2, na branch `entrega-2`.
 
 ### Dados provisórios
 
-O e-mail e o WhatsApp de contato e os números do painel da home são
-provisórios. Eles estão identificados no próprio código e no
-[`REGISTRO-IA.md`](REGISTRO-IA.md), e serão trocados pelos dados oficiais da
-agência antes da versão final.
+O e-mail de contato e os números do painel da home são provisórios. Eles estão
+identificados no próprio código e no [`REGISTRO-IA.md`](REGISTRO-IA.md) e serão
+trocados pelos dados oficiais da agência antes da versão final. O WhatsApp já é
+o número real.
 
 ---
 
