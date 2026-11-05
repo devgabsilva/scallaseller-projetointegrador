@@ -60,9 +60,9 @@ seções de uma página só.
 
 ## Como visualizar
 
-- **Site no ar (GitHub Pages):** `https://devgabsilva.github.io/scalla-seller/`
+- **Site no ar (GitHub Pages):** `https://devgabsilva.github.io/scallaseller-projetointegrador/`
 - **Código desta entrega:** branch
-  [`entrega-1`](https://github.com/devgabsilva/scalla-seller/tree/entrega-1)
+  [`entrega-1`](https://github.com/devgabsilva/scallaseller-projetointegrador/tree/entrega-1)
 - **No computador, sem internet:** baixar o repositório e abrir o
   `index.html` no navegador.
 - **Validar no W3C:** colar o endereço do site em
