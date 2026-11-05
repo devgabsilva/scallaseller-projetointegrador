@@ -3,7 +3,7 @@
 **Projeto:** Scalla Seller — site institucional de agência de marketplaces
 **Aluno:** Gabriel Silva Machado — RA 98039075
 **Entrega:** 1 — Esqueleto Semântico (`entrega-1`)
-**Ferramenta utilizada:** Claude (Anthropic), modelo Opus 5
+**Ferramenta utilizada:** Claude (Anthropic), modelos Opus 5 e Opus 5.5
 **Data:** 05/11/2026
 
 > Documento exigido pela seção 5 do enunciado do Projeto Integrador.
@@ -12,24 +12,44 @@
 
 ## 1. Mapeamento de Uso
 
-Declaração honesta do que foi gerado por IA e do que não foi.
+### Código e arquivos
 
 | Arquivo | Participação da IA | Observação |
 |---|---|---|
-| `index.html` | **Integral** | Estrutura e redação gerados por IA a partir do briefing abaixo |
-| `servicos.html` | **Integral** | Idem |
-| `planos.html` | **Integral** | Idem |
+| `index.html` | **Integral** | Estrutura e redação geradas por IA a partir do briefing |
+| `catalogo.html` | **Integral** | Idem |
+| `sobre.html` | **Integral** | Idem |
 | `contato.html` | **Integral** | Idem |
-| `img/*.png` | **Integral** | Imagens placeholder geradas por script Python (Pillow) |
+| `img/*.png` | **Integral** | Imagens provisórias geradas por script Python (Pillow) |
 | `README.md` | **Integral** | Idem |
-| Este arquivo (seções 1 e 2) | **Integral** | — |
+| Este arquivo (seções 1, 2 e 4) | **Integral** | — |
 | **Este arquivo (seção 3)** | **Nenhuma** | Revisão técnica feita pelo aluno |
-| **Conteúdo de negócio** | **Nenhuma** | Preços, serviços, canais, escopo e condições comerciais são dados reais da empresa, fornecidos pelo aluno |
 
-**Resumo:** o código HTML desta entrega foi gerado integralmente com apoio de IA
-a partir de um briefing meu, e em seguida auditado e modificado por mim conforme
-a seção 3. O conteúdo de negócio — valores, serviços e condições — é informação
-real da minha própria empresa e não foi inventado pela ferramenta.
+### Conteúdo do site
+
+Aqui há duas origens diferentes, e a distinção importa:
+
+**Dados fornecidos por mim (informação real da empresa):**
+- Nome da agência, sócios e paleta azul e branco.
+- Os dois serviços (estruturação e gestão mensal) e as 7 frentes do
+  acompanhamento 360: onboarding, pesquisa de mercado, precificação, anúncios,
+  criativos, Ads e gestão contínua.
+- Canais: Mercado Livre e Shopee; TikTok Shop fora do escopo atual.
+- Todos os preços das tabelas.
+- Condições: sem limite de SKUs; verba de Ads paga pelo cliente.
+- Público: CNPJ de qualquer nicho, já vendendo ou começando.
+
+**Redigido pela IA, a ser confirmado por mim antes de o site ir ao ar de verdade:**
+- Todo o texto corrido (a redação das frases, não os fatos acima).
+- Localização em Borda da Mata e horário de segunda a sexta, das 8h às 18h.
+- Relatório periódico de acompanhamento para o cliente.
+- Itens de "O que não está incluso" além da verba de Ads (logística, estoque e
+  atendimento ao comprador final).
+- Os números do painel ilustrativo (R$ 184 mil, 2.431 pedidos, ACOS de 9,4%),
+  que são **fictícios** e estão identificados assim na própria página.
+- **Dados de contato provisórios:** o e-mail `contato@scallaseller.com.br` e o
+  número de WhatsApp são exemplos. O número usa DDD 00, que não existe, para não
+  apontar para uma pessoa real.
 
 ---
 
@@ -55,30 +75,70 @@ LEIA O CONTEXTO E FACA
 
 ### Prompt 2 — definição do tema
 
-A ferramenta perguntou qual seria o tema antes de gerar qualquer código, já que
-errar o tema implicaria refazer as quatro páginas. Minha resposta:
+Antes de gerar qualquer código, a ferramenta perguntou qual seria o tema. Minha
+resposta (opção escolhida numa lista):
 
 ```
 Scalla Seller — agência de marketplaces
 ```
 
+### Prompt 3 — alinhamento ao tema do enunciado
+
+A primeira versão tinha as páginas Home, Serviços, Planos e Contato, o que não
+correspondia a nenhuma das cinco sugestões do professor. Pedi o ajuste:
+
+```
+faça com que entre na sugestão do tema, dentro do que ele propôs
+```
+
+Resultado: o site foi reorganizado para a **sugestão 2 (site de pequeno negócio
+local)**, com Home, Catálogo, Sobre e Contato, e a parte de
+Localização/Horários entrou como seção da página de contato.
+
+### Prompt 4 — revisão de erros
+
+```
+QUERO QUE REVISE E PROCURE ERROS E Arrume, ja esta no github? me explica o que
+foi feito e como, quero saber explicar e como eu mostro? a onde eiu vejo?
+```
+
 ### Contexto adicional fornecido
 
-Além dos prompts acima, a ferramenta teve acesso a dados da empresa que eu havia
-registrado anteriormente e que foram usados como conteúdo real do site:
-
-- Serviços: estruturação de loja e gestão mensal, com acompanhamento 360
-  (onboarding, pesquisa de mercado, precificação, anúncios, criativos, Ads,
-  gestão contínua).
-- Canais: Mercado Livre e Shopee; TikTok Shop fora do escopo atual.
-- Preços: estruturação R$ 1.500 por marketplace ou R$ 2.100 no combo
-  ML + Shopee; gestão mensal R$ 1.300 por conta (R$ 900/mês no anual) ou
-  R$ 1.900 no combo (R$ 1.500/mês no anual).
-- Condições: sem limite de SKUs; verba de Ads paga pelo cliente.
-- Público: CNPJ de qualquer nicho, já vendendo ou começando.
-- Identidade visual: paleta azul e branco.
+Além dos prompts, a ferramenta usou dados da empresa que eu já tinha passado em
+conversas anteriores. São os itens listados como "dados fornecidos por mim" na
+seção 1.
 
 **Nenhum outro prompt foi utilizado nesta entrega.**
+
+---
+
+## 2.1 Correções feitas pela própria IA (prompt 4)
+
+> Estas correções foram feitas pela ferramenta na própria saída dela, depois do
+> meu pedido de revisão. **Não fazem parte da minha revisão técnica**, que está
+> na seção 3. Registro aqui por transparência: elas fazem parte do processo de
+> uso da IA.
+
+| # | Erro na versão gerada | Correção |
+|---|---|---|
+| 1 | O formulário usava `method="post"`. O GitHub Pages recusa POST e devolve erro 405 | `method` ficou no padrão (GET) até existir back-end |
+| 2 | Comentário afirmava que um `<h3>` dentro do `<summary>` coloca a pergunta na lista de títulos. Vários leitores de tela tratam o `<summary>` como botão e descartam a semântica do heading | `<h3>` removido do `<summary>` e comentário corrigido |
+| 3 | O WhatsApp de exemplo tinha DDD 35 e podia ser o número de uma pessoa real | Trocado por um número de DDD 00, que não existe |
+| 4 | O texto inventava compromissos comerciais que eu nunca defini: diagnóstico gratuito, resposta em 1 dia útil, resultado em 3 a 6 meses, atendimento aos sábados, estruturação como pré-requisito, preço travado no anual | Removidos ou trocados por texto neutro |
+| 5 | Atribuía ao meu sócio responsabilidades que eu nunca descrevi | Trocado por "Sócio-fundador", até eu definir os papéis |
+| 6 | Legenda do painel dava a entender que era resultado real de cliente | Identificado como ilustrativo, com números fictícios |
+| 7 | O método 360 tinha 6 frentes, mas o que eu passei tem 7 (Ads é uma frente separada) | Frente "Ads" adicionada |
+| 8 | Texto das imagens sem acentuação ("Gestao", "Evolucao") | Imagens geradas de novo, com acento |
+| 9 | Este registro listava arquivos que não existiam mais, não tinha os prompts 3 e 4 e afirmava que a IA não tinha participado do conteúdo de negócio | Registro reescrito |
+| 10 | Cada pergunta do FAQ estava num `<article>` sem heading. O W3C acusava "Article lacks heading", sinal de over-tagging | O `<article>` passou a envolver o FAQ inteiro, que tem título próprio e faz sentido fora da página |
+
+### Autoria dos commits
+
+Os quatro primeiros commits da branch (`45ff434`, `1850cc4`, `37bb514`,
+`f3a58f9`) foram criados pela ferramenta com o meu nome de usuário do git e
+**sem** a marcação de coautoria. A partir do commit de correções, os commits
+feitos pela IA trazem a linha `Co-Authored-By: Claude`, que o GitHub mostra como
+coautor. Os commits da minha revisão técnica (seção 3) são só meus.
 
 ---
 
@@ -86,14 +146,14 @@ registrado anteriormente e que foram usados como conteúdo real do site:
 
 > **ESTA SEÇÃO AINDA PRECISA SER PREENCHIDA POR MIM, GABRIEL.**
 >
-> Ela não foi gerada por IA de propósito: o enunciado avalia justamente a minha
-> capacidade de auditar o código, e preencher isto com texto gerado seria
-> exatamente o que a seção 5 quer evitar. Vale 15% da nota e é o que sustenta
-> a defesa final.
+> Não foi gerada por IA, de propósito: o enunciado avalia justamente a minha
+> capacidade de auditar o código. Preencher isto com texto gerado seria
+> exatamente o que a seção 5 quer evitar. Vale 15% da nota e sustenta a defesa
+> final.
 >
-> **O que fazer:** escolher no mínimo 3 dos pontos listados em
-> `PONTOS-PARA-REVISAO.md`, **alterar o código de fato**, e documentar cada
-> alteração no formato abaixo. Depois, apagar este bloco de aviso.
+> **O que fazer:** escolher no mínimo 3 dos pontos de `PONTOS-PARA-REVISAO.md`,
+> **alterar o código de fato** e documentar cada alteração no formato abaixo.
+> Depois, apagar este bloco de aviso.
 
 ### Alteração 1
 
@@ -157,9 +217,11 @@ registrado anteriormente e que foram usados como conteúdo real do site:
 
 ## 4. Validação independente
 
-Além da revisão manual, o código foi submetido a verificação automatizada:
+Além da revisão manual, o código passou por verificação automatizada:
 
-- **W3C Nu HTML Checker** (`html5validator`) — 4 páginas, **zero erros**.
-- **Script próprio de verificação** — hierarquia de headings, âncoras quebradas,
-  `alt` ausente, `label` órfão, `th` sem `scope`, `id` duplicado, `aria-current`
-  incorreto e presença indevida de CSS/JS. Nenhuma falha.
+- **W3C Nu HTML Checker** (`vnu.jar`), rodado direto nas 4 páginas:
+  *"Document checking completed. No errors found."* O único aviso é informativo,
+  sobre o suporte do atributo `inputmode` em navegadores antigos.
+- **Script de verificação estrutural** — hierarquia de headings, âncoras
+  quebradas, `alt` ausente, `label` órfão, `th` sem `scope`, `id` duplicado,
+  `aria-current` incorreto e presença indevida de CSS/JS. Nenhuma falha.

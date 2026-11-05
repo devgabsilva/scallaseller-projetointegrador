@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fale com a Scalla Seller, veja a localização e os horários de atendimento e solicite o diagnóstico gratuito da sua conta.">
+  <meta name="description" content="Fale com a Scalla Seller, veja a localização e os horários de atendimento e solicite uma proposta para a sua conta no Mercado Livre ou na Shopee.">
   <title>Contato, localização e horários | Scalla Seller</title>
 </head>
 <body>
@@ -29,14 +29,13 @@
     <h1>Contato, localização e horários</h1>
 
     <p>
-      Preencha o formulário para solicitar o diagnóstico gratuito. Respondemos em
-      até um dia útil.
+      Preencha o formulário para solicitar uma proposta para a sua conta.
     </p>
 
     <nav aria-label="Sumário desta página">
       <h2>Nesta página</h2>
       <ul>
-        <li><a href="#formulario">Formulário de diagnóstico</a></li>
+        <li><a href="#formulario">Formulário de contato</a></li>
         <li><a href="#localizacao">Localização e horários</a></li>
         <li><a href="#canais-diretos">Canais diretos</a></li>
         <li><a href="#faq">Perguntas frequentes</a></li>
@@ -44,14 +43,19 @@
     </nav>
 
     <section id="formulario">
-      <h2>Formulário de diagnóstico</h2>
+      <h2>Formulário de contato</h2>
 
       <!--
-        Sem back-end nesta etapa: o formulário não tem action, então ele recarrega
-        a própria página ao enviar. A validação é 100% nativa do HTML5
-        (required, type, pattern) — nenhum JavaScript envolvido.
+        Sem back-end nesta etapa: o formulário não tem action, então ao enviar
+        ele recarrega a própria página. A validação é 100% nativa do HTML5
+        (required, type, pattern), sem nenhum JavaScript.
+
+        O method foi deixado no padrão (GET) de propósito. Hospedagens estáticas
+        como o GitHub Pages recusam requisições POST e devolvem erro 405, então
+        um method="post" faria o formulário cair numa página de erro ao ser
+        testado. O POST entra quando houver um back-end para receber os dados.
       -->
-      <form method="post">
+      <form>
 
         <fieldset>
           <legend>Seus dados</legend>
@@ -144,7 +148,7 @@
         </p>
 
         <p>
-          <button type="submit">Solicitar diagnóstico gratuito</button>
+          <button type="submit">Enviar solicitação de proposta</button>
         </p>
       </form>
     </section>
@@ -161,8 +165,7 @@
       <address>
         Scalla Seller<br>
         Borda da Mata — Minas Gerais<br>
-        Atendemos todo o Sul de Minas presencialmente e o restante do país
-        de forma remota.
+        Atendimento remoto, por WhatsApp e e-mail.
       </address>
 
       <h3>Horário de atendimento</h3>
@@ -172,14 +175,8 @@
           Das <time datetime="08:00">08h</time> às <time datetime="18:00">18h</time>
         </dd>
 
-        <dt>Sábado</dt>
-        <dd>
-          Das <time datetime="09:00">09h</time> às <time datetime="12:00">12h</time>,
-          apenas para contas em gestão ativa
-        </dd>
-
-        <dt>Domingo e feriados</dt>
-        <dd>Sem atendimento. Mensagens são respondidas no próximo dia útil.</dd>
+        <dt>Sábado, domingo e feriados</dt>
+        <dd>Sem atendimento.</dd>
       </dl>
     </section>
 
@@ -192,8 +189,13 @@
           <a href="mailto:contato@scallaseller.com.br">contato@scallaseller.com.br</a>
         </li>
         <li>
+          <!--
+            PROVISÓRIO: número de exemplo até o número oficial da agência
+            existir. O DDD 00 não existe no Brasil, então o link não leva
+            ninguém ao WhatsApp de um desconhecido por engano.
+          -->
           WhatsApp:
-          <a href="https://wa.me/5535999998888" rel="noopener noreferrer" target="_blank">
+          <a href="https://wa.me/5500000000000" rel="noopener noreferrer" target="_blank">
             Abrir conversa no WhatsApp (abre em nova aba)
           </a>
         </li>
@@ -206,7 +208,15 @@
       -->
     </section>
 
-    <section id="faq">
+    <!--
+      O FAQ inteiro é um <article>, e não cada pergunta. Um <article> precisa
+      fazer sentido sozinho, fora da página: o bloco de perguntas frequentes
+      faz (poderia ser reaproveitado no catálogo sem perder sentido), mas uma
+      pergunta solta, sem título próprio, não passa no mesmo teste. O próprio
+      validador do W3C acusa "Article lacks heading" quando cada pergunta vira
+      um <article> sem heading.
+    -->
+    <article id="faq">
       <h2>Perguntas frequentes</h2>
 
       <!--
@@ -214,59 +224,55 @@
         JavaScript: o navegador já trata foco, teclado (Enter/Espaço) e o
         estado expandido/recolhido para a tecnologia assistiva.
 
-        O <h3> fica DENTRO do <summary> — a spec permite um elemento de heading
-        como conteúdo do summary. Assim as perguntas entram na lista de títulos
-        da página e quem usa leitor de tela pode pular de pergunta em pergunta.
+        O <summary> leva só texto, sem <h3> dentro. A spec até permite heading
+        ali, mas vários leitores de tela expõem o <summary> como botão, e o
+        conteúdo de um botão perde a semântica de heading. A pergunta acabaria
+        não aparecendo na lista de títulos, então colocar o <h3> só daria a
+        falsa impressão de que aparece.
       -->
-      <article>
-        <details>
-          <summary><h3>Vocês trabalham com qualquer nicho?</h3></summary>
-          <p>
-            Sim. O requisito é ter CNPJ ativo e produto próprio ou autorização
-            para revenda. O nicho muda a pesquisa de mercado, não o método.
-          </p>
-        </details>
-      </article>
+      <details>
+        <summary>Vocês trabalham com qualquer nicho?</summary>
+        <p>
+          Sim. Atendemos CNPJ de qualquer nicho, tanto quem já vende em
+          marketplace quanto quem ainda está começando. O nicho muda a
+          pesquisa de mercado, não o método.
+        </p>
+      </details>
 
-      <article>
-        <details>
-          <summary><h3>A verba de anúncios está inclusa no plano?</h3></summary>
-          <p>
-            Não. O investimento em Ads é pago pelo cliente diretamente à
-            plataforma. O valor do plano é apenas o fee de gestão.
-          </p>
-        </details>
-      </article>
+      <details>
+        <summary>A verba de anúncios está inclusa no plano?</summary>
+        <p>
+          Não. O investimento em Ads é pago pelo cliente diretamente à
+          plataforma. O valor do plano é apenas o fee de gestão.
+        </p>
+      </details>
 
-      <article>
-        <details>
-          <summary><h3>Existe limite de produtos cadastrados?</h3></summary>
-          <p>
-            Não há teto de SKUs em nenhum dos serviços. O preço é por
-            marketplace e por conta, não por volume de catálogo.
-          </p>
-        </details>
-      </article>
+      <details>
+        <summary>Existe limite de produtos cadastrados?</summary>
+        <p>
+          Não há teto de SKUs em nenhum dos serviços. O preço é por
+          marketplace e por conta, não por volume de catálogo.
+        </p>
+      </details>
 
-      <article>
-        <details>
-          <summary><h3>Em quanto tempo aparecem resultados?</h3></summary>
-          <p>
-            Marketplace é um canal de maturação: reputação e histórico de vendas
-            pesam no ranqueamento. O horizonte realista é de três a seis meses,
-            e por isso o contrato anual tem desconto.
-          </p>
-        </details>
-      </article>
-    </section>
+      <details>
+        <summary>Em quanto tempo aparecem resultados?</summary>
+        <p>
+          Depende do nicho, da concorrência e do histórico da conta.
+          Marketplace é um canal de maturação: reputação e histórico de vendas
+          pesam no ranqueamento. Por isso o contrato anual tem valor menor —
+          o trabalho rende mais com tempo.
+        </p>
+      </details>
+    </article>
   </main>
 
   <aside aria-labelledby="titulo-antes">
     <h2 id="titulo-antes">Antes de enviar</h2>
     <p>
       Se já vende em marketplace, tenha em mãos o link da sua loja e o
-      faturamento médio dos últimos três meses. Com esses dois dados o
-      diagnóstico sai no mesmo dia.
+      faturamento médio dos últimos meses. Esses dados agilizam a montagem
+      da proposta.
     </p>
   </aside>
 

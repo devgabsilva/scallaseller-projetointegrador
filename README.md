@@ -58,6 +58,18 @@ seções de uma página só.
 
 ---
 
+## Como visualizar
+
+- **Site no ar (GitHub Pages):** `https://devgabsilva.github.io/scalla-seller/`
+- **Código desta entrega:** branch
+  [`entrega-1`](https://github.com/devgabsilva/scalla-seller/tree/entrega-1)
+- **No computador, sem internet:** baixar o repositório e abrir o
+  `index.html` no navegador.
+- **Validar no W3C:** colar o endereço do site em
+  <https://validator.w3.org/nu/>.
+
+---
+
 ## Escopo desta entrega
 
 A Entrega 1 é **HTML puro, sem CSS**. Nenhuma página contém `<style>`,
@@ -66,6 +78,13 @@ propositalmente feias: o que está sendo avaliado é o documento, não a aparên
 
 A estilização (Flexbox/Grid, variáveis CSS, 3 breakpoints) entra na
 Entrega 2, na branch `entrega-2`.
+
+### Dados provisórios
+
+O e-mail e o WhatsApp de contato e os números do painel da home são
+provisórios. Eles estão identificados no próprio código e no
+[`REGISTRO-IA.md`](REGISTRO-IA.md), e serão trocados pelos dados oficiais da
+agência antes da versão final.
 
 ---
 
@@ -82,7 +101,7 @@ Entrega 2, na branch `entrega-2`.
 | **Texto de link descritivo** | Nenhum "clique aqui"; links que abrem nova aba avisam no próprio texto | todas as páginas |
 | **Tabelas de dados** | `<caption>` + `<th scope="col">` e `<th scope="row">` | `catalogo.html` |
 | **Formulário** | `<label for>` em todos os campos, `<fieldset>`/`<legend>` nos grupos, `title` explicando o `pattern`, atributos `autocomplete` | `contato.html` |
-| **Acordeão acessível** | FAQ em `<details>`/`<summary>` com o `<h3>` dentro do `<summary>`, para que as perguntas entrem na lista de títulos da página | `contato.html` |
+| **Acordeão acessível** | FAQ em `<details>`/`<summary>` nativos: o navegador cuida do foco, das teclas Enter e Espaço e do estado aberto/fechado, sem JavaScript | `contato.html` |
 | **Página atual** | `aria-current="page"` no item de menu correspondente | `<nav>` de cada página |
 | **Navegação por teclado** | Só são usados elementos nativamente focáveis (`a`, `button`, `input`, `select`, `textarea`, `summary`). Nenhuma `div` ou `span` clicável, nenhum `tabindex` positivo | todas as páginas |
 
