@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fale com a Scalla Seller, veja a localização e os horários de atendimento e solicite o diagnóstico gratuito da sua conta.">
+  <title>Contato, localização e horários | Scalla Seller</title>
+</head>
+<body>
+
+  <a href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header>
+    <a href="index.html">
+      <img src="img/logo-scalla-seller.png" alt="Scalla Seller — página inicial" width="240" height="60">
+    </a>
+
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="catalogo.html">Catálogo de serviços</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html" aria-current="page">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <h1>Contato, localização e horários</h1>
+
+    <p>
+      Preencha o formulário para solicitar o diagnóstico gratuito. Respondemos em
+      até um dia útil.
+    </p>
+
+    <nav aria-label="Sumário desta página">
+      <h2>Nesta página</h2>
+      <ul>
+        <li><a href="#formulario">Formulário de diagnóstico</a></li>
+        <li><a href="#localizacao">Localização e horários</a></li>
+        <li><a href="#canais-diretos">Canais diretos</a></li>
+        <li><a href="#faq">Perguntas frequentes</a></li>
+      </ul>
+    </nav>
+
+    <section id="formulario">
+      <h2>Formulário de diagnóstico</h2>
+
+      <!--
+        Sem back-end nesta etapa: o formulário não tem action, então ele recarrega
+        a própria página ao enviar. A validação é 100% nativa do HTML5
+        (required, type, pattern) — nenhum JavaScript envolvido.
+      -->
+      <form method="post">
+
+        <fieldset>
+          <legend>Seus dados</legend>
+
+          <!--
+            DECISÃO 5 — <label for> em todos os campos, com placeholder apenas
+            como EXEMPLO de formato, nunca como rótulo. Placeholder some quando
+            o usuário começa a digitar e muitos leitores de tela não o anunciam;
+            quem depende dele perde a identificação do campo no meio do
+            preenchimento.
+          -->
+          <p>
+            <label for="nome">Nome completo (obrigatório)</label><br>
+            <input type="text" id="nome" name="nome" autocomplete="name" required>
+          </p>
+
+          <p>
+            <label for="empresa">Nome da empresa (obrigatório)</label><br>
+            <input type="text" id="empresa" name="empresa" autocomplete="organization" required>
+          </p>
+
+          <p>
+            <label for="email">E-mail (obrigatório)</label><br>
+            <input type="email" id="email" name="email" autocomplete="email"
+                   placeholder="nome@empresa.com.br" required>
+          </p>
+
+          <p>
+            <!--
+              O title é o que o navegador mostra quando o pattern falha. Sem ele,
+              a mensagem nativa é genérica ("corresponda ao formato solicitado")
+              e o usuário não descobre qual formato é o esperado.
+            -->
+            <label for="telefone">WhatsApp com DDD (obrigatório)</label><br>
+            <input type="tel" id="telefone" name="telefone" autocomplete="tel"
+                   pattern="[0-9]{10,11}" inputmode="numeric"
+                   title="Digite somente números, com DDD. Exemplo: 35999998888"
+                   placeholder="35999998888" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Sua operação</legend>
+
+          <p>
+            <label for="marketplace">Canal de interesse (obrigatório)</label><br>
+            <select id="marketplace" name="marketplace" required>
+              <option value="">Selecione uma opção</option>
+              <option value="mercado-livre">Mercado Livre</option>
+              <option value="shopee">Shopee</option>
+              <option value="combo">Mercado Livre + Shopee</option>
+              <option value="indeciso">Ainda não sei</option>
+            </select>
+          </p>
+
+          <!--
+            Grupo de rádios dentro de seu próprio <fieldset> com <legend>:
+            é o <legend> que dá o contexto da pergunta ao leitor de tela antes
+            de cada opção. Sem ele, o usuário ouve só "Sim" e "Não", soltos.
+          -->
+          <fieldset>
+            <legend>Já vende em marketplace hoje?</legend>
+            <p>
+              <input type="radio" id="ja-vende-sim" name="ja-vende" value="sim" required>
+              <label for="ja-vende-sim">Sim, já tenho conta ativa</label>
+            </p>
+            <p>
+              <input type="radio" id="ja-vende-nao" name="ja-vende" value="nao">
+              <label for="ja-vende-nao">Não, quero começar agora</label>
+            </p>
+          </fieldset>
+
+          <p>
+            <label for="skus">Quantidade aproximada de produtos</label><br>
+            <input type="number" id="skus" name="skus" min="1" step="1" placeholder="120">
+          </p>
+
+          <p>
+            <label for="mensagem">Conte rapidamente sua situação</label><br>
+            <textarea id="mensagem" name="mensagem" rows="5" cols="40"></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="termos" name="termos" value="aceito" required>
+          <label for="termos">
+            Autorizo a Scalla Seller a entrar em contato sobre esta solicitação
+            (obrigatório).
+          </label>
+        </p>
+
+        <p>
+          <button type="submit">Solicitar diagnóstico gratuito</button>
+        </p>
+      </form>
+    </section>
+
+    <section id="localizacao">
+      <h2>Localização e horários</h2>
+
+      <h3>Onde estamos</h3>
+      <!--
+        <address> é para os dados de contato do responsável pelo conteúdo —
+        exatamente este caso. Não é uma tag genérica de "endereço": usá-la para
+        o endereço de um cliente dentro de um artigo seria errado.
+      -->
+      <address>
+        Scalla Seller<br>
+        Borda da Mata — Minas Gerais<br>
+        Atendemos todo o Sul de Minas presencialmente e o restante do país
+        de forma remota.
+      </address>
+
+      <h3>Horário de atendimento</h3>
+      <dl>
+        <dt>Segunda a sexta</dt>
+        <dd>
+          Das <time datetime="08:00">08h</time> às <time datetime="18:00">18h</time>
+        </dd>
+
+        <dt>Sábado</dt>
+        <dd>
+          Das <time datetime="09:00">09h</time> às <time datetime="12:00">12h</time>,
+          apenas para contas em gestão ativa
+        </dd>
+
+        <dt>Domingo e feriados</dt>
+        <dd>Sem atendimento. Mensagens são respondidas no próximo dia útil.</dd>
+      </dl>
+    </section>
+
+    <section id="canais-diretos">
+      <h2>Canais diretos</h2>
+
+      <ul>
+        <li>
+          E-mail:
+          <a href="mailto:contato@scallaseller.com.br">contato@scallaseller.com.br</a>
+        </li>
+        <li>
+          WhatsApp:
+          <a href="https://wa.me/5535999998888" rel="noopener noreferrer" target="_blank">
+            Abrir conversa no WhatsApp (abre em nova aba)
+          </a>
+        </li>
+      </ul>
+
+      <!--
+        O "(abre em nova aba)" faz parte do texto do link de propósito: avisa
+        antes do clique que o contexto vai mudar. Quem usa leitor de tela não
+        tem como perceber a aba nova sozinho.
+      -->
+    </section>
+
+    <section id="faq">
+      <h2>Perguntas frequentes</h2>
+
+      <!--
+        <details>/<summary> entrega conteúdo expansível sem uma linha de
+        JavaScript: o navegador já trata foco, teclado (Enter/Espaço) e o
+        estado expandido/recolhido para a tecnologia assistiva.
+
+        O <h3> fica DENTRO do <summary> — a spec permite um elemento de heading
+        como conteúdo do summary. Assim as perguntas entram na lista de títulos
+        da página e quem usa leitor de tela pode pular de pergunta em pergunta.
+      -->
+      <article>
+        <details>
+          <summary><h3>Vocês trabalham com qualquer nicho?</h3></summary>
+          <p>
+            Sim. O requisito é ter CNPJ ativo e produto próprio ou autorização
+            para revenda. O nicho muda a pesquisa de mercado, não o método.
+          </p>
+        </details>
+      </article>
+
+      <article>
+        <details>
+          <summary><h3>A verba de anúncios está inclusa no plano?</h3></summary>
+          <p>
+            Não. O investimento em Ads é pago pelo cliente diretamente à
+            plataforma. O valor do plano é apenas o fee de gestão.
+          </p>
+        </details>
+      </article>
+
+      <article>
+        <details>
+          <summary><h3>Existe limite de produtos cadastrados?</h3></summary>
+          <p>
+            Não há teto de SKUs em nenhum dos serviços. O preço é por
+            marketplace e por conta, não por volume de catálogo.
+          </p>
+        </details>
+      </article>
+
+      <article>
+        <details>
+          <summary><h3>Em quanto tempo aparecem resultados?</h3></summary>
+          <p>
+            Marketplace é um canal de maturação: reputação e histórico de vendas
+            pesam no ranqueamento. O horizonte realista é de três a seis meses,
+            e por isso o contrato anual tem desconto.
+          </p>
+        </details>
+      </article>
+    </section>
+  </main>
+
+  <aside aria-labelledby="titulo-antes">
+    <h2 id="titulo-antes">Antes de enviar</h2>
+    <p>
+      Se já vende em marketplace, tenha em mãos o link da sua loja e o
+      faturamento médio dos últimos três meses. Com esses dois dados o
+      diagnóstico sai no mesmo dia.
+    </p>
+  </aside>
+
+  <footer>
+    <img src="img/ornamento.png" alt="" width="900" height="20">
+
+    <h2>Scalla Seller</h2>
+
+    <address>
+      Borda da Mata — MG<br>
+      E-mail: <a href="mailto:contato@scallaseller.com.br">contato@scallaseller.com.br</a>
+    </address>
+
+    <nav aria-label="Navegação do rodapé">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="catalogo.html">Catálogo de serviços</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <p><small>&copy; <time datetime="2026">2026</time> Scalla Seller. Todos os direitos reservados.</small></p>
+  </footer>
+
+</body>
+</html>

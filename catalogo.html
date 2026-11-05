@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de serviços da Scalla Seller: estruturação de loja a partir de R$ 1.500 por marketplace e gestão mensal a partir de R$ 900 por mês.">
+  <title>Catálogo de serviços e preços | Scalla Seller</title>
+</head>
+<body>
+
+  <a href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header>
+    <a href="index.html">
+      <img src="img/logo-scalla-seller.png" alt="Scalla Seller — página inicial" width="240" height="60">
+    </a>
+
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="catalogo.html" aria-current="page">Catálogo de serviços</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <h1>Catálogo de serviços e preços</h1>
+
+    <p>
+      Os valores abaixo são os praticados em
+      <time datetime="2026-11">novembro de 2026</time> e valem para qualquer
+      nicho, sem limite de produtos no catálogo.
+    </p>
+
+    <nav aria-label="Sumário desta página">
+      <h2>Nesta página</h2>
+      <ul>
+        <li><a href="#servicos">Os dois serviços</a></li>
+        <li><a href="#nao-incluso">O que não está incluso</a></li>
+        <li><a href="#condicoes">Condições comerciais</a></li>
+      </ul>
+    </nav>
+
+    <section id="servicos">
+      <h2>Os dois serviços</h2>
+
+      <article id="estruturacao">
+        <h3>Estruturação de loja</h3>
+        <p>
+          Serviço pontual, cobrado por marketplace. É o trabalho de deixar a
+          conta em condição de competir.
+        </p>
+
+        <h4>O que entra</h4>
+        <ul>
+          <li>Abertura ou auditoria da conta de vendedor.</li>
+          <li>Cadastro completo do catálogo, com ficha técnica preenchida.</li>
+          <li>Pesquisa de mercado e definição da faixa de preço por produto.</li>
+          <li>Redação de títulos e descrições otimizados para a busca interna.</li>
+          <li>Produção das imagens de vitrine no padrão da plataforma.</li>
+          <li>Configuração das regras de frete e das políticas da loja.</li>
+        </ul>
+
+        <h4>Valores</h4>
+
+        <!--
+          DECISÃO 4 — <table> de verdade, com <caption> e <th scope>.
+          Isto é dado tabular (escopo cruzado com valor), então tabela é o
+          elemento correto — não uma lista nem divs. O <caption> dá à tabela um
+          nome acessível, e o scope diz ao leitor de tela qual cabeçalho governa
+          cada célula. Sem scope, quem usa leitor de tela ouve "R$ 2.100" sem
+          saber a que se refere.
+        -->
+        <table>
+          <caption>Valores de estruturação de loja, por escopo contratado</caption>
+          <thead>
+            <tr>
+              <th scope="col">Escopo</th>
+              <th scope="col">Investimento</th>
+              <th scope="col">Forma de pagamento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1 marketplace</th>
+              <td>R$ 1.500</td>
+              <td>Pagamento único</td>
+            </tr>
+            <tr>
+              <th scope="row">Combo Mercado Livre + Shopee</th>
+              <td>R$ 2.100</td>
+              <td>Pagamento único</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          A estruturação é pré-requisito da gestão mensal: não assumimos a
+          operação de uma conta que não passou por essa etapa, porque o resultado
+          dependeria de um catálogo que não controlamos.
+        </p>
+      </article>
+
+      <article id="gestao">
+        <h3>Gestão mensal</h3>
+        <p>
+          Serviço recorrente, cobrado por conta. Depois que a loja está
+          estruturada, assumimos a operação do dia a dia.
+        </p>
+
+        <h4>O que entra</h4>
+        <ul>
+          <li>Acompanhamento e ajuste de preço frente à concorrência.</li>
+          <li>Criação e otimização de campanhas de Ads dentro da plataforma.</li>
+          <li>Monitoramento de reputação, prazos e indicadores de conta.</li>
+          <li>Cadastro de novos produtos e revisão dos anúncios existentes.</li>
+          <li>Participação em campanhas e datas promocionais do marketplace.</li>
+          <li>Relatório mensal com justificativa das decisões tomadas.</li>
+        </ul>
+
+        <h4>Valores</h4>
+
+        <table>
+          <caption>Valores de gestão mensal, por escopo e por tipo de contrato</caption>
+          <thead>
+            <tr>
+              <th scope="col">Escopo</th>
+              <th scope="col">Contrato mensal</th>
+              <th scope="col">Contrato anual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1 conta</th>
+              <td>R$ 1.300 por mês</td>
+              <td>R$ 900 por mês, em 12 parcelas</td>
+            </tr>
+            <tr>
+              <th scope="row">Combo Mercado Livre + Shopee</th>
+              <td>R$ 1.900 por mês</td>
+              <td>R$ 1.500 por mês, em 12 parcelas</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          O contrato anual sai mais barato porque o resultado em marketplace é
+          cumulativo: reputação, histórico de vendas e aprendizado de campanha
+          levam meses para maturar. O desconto reflete o horizonte real do trabalho.
+        </p>
+      </article>
+    </section>
+
+    <section id="nao-incluso">
+      <h2>O que não está incluso</h2>
+      <p>Deixamos explícito para evitar ruído na proposta comercial:</p>
+      <ul>
+        <li>
+          <strong>Verba de anúncios.</strong> O investimento em Ads é pago
+          diretamente pelo cliente à plataforma. Nossa remuneração é o fee de gestão.
+        </li>
+        <li>
+          <strong>Logística e estoque.</strong> Separação, embalagem e envio
+          seguem com o lojista.
+        </li>
+        <li>
+          <strong>Atendimento ao comprador final.</strong> Podemos orientar o
+          processo, mas as respostas são da equipe do cliente.
+        </li>
+      </ul>
+    </section>
+
+    <section id="condicoes">
+      <h2>Condições comerciais</h2>
+
+      <dl>
+        <dt>Limite de produtos</dt>
+        <dd>
+          Não há teto de SKUs em nenhum dos serviços. O preço é por marketplace
+          e por conta, não por volume de catálogo.
+        </dd>
+
+        <dt>Prazo de estruturação</dt>
+        <dd>
+          Depende do tamanho do catálogo e é fechado no diagnóstico, antes da
+          assinatura.
+        </dd>
+
+        <dt>Reajuste</dt>
+        <dd>
+          Contratos anuais mantêm o valor travado durante os 12 meses de vigência.
+        </dd>
+      </dl>
+
+      <p>
+        Para montar a proposta com os números do seu catálogo,
+        <a href="contato.html#formulario">envie os dados pelo formulário de contato</a>.
+      </p>
+    </section>
+  </main>
+
+  <aside aria-labelledby="titulo-combo">
+    <h2 id="titulo-combo">Por que o combo compensa</h2>
+    <p>
+      Estruturar os dois canais juntos economiza R$ 900 na entrada, e a gestão em
+      combo custa menos que duas contas avulsas. O catálogo é o mesmo nos dois
+      marketplaces — o trabalho de pesquisa e precificação se aproveita.
+    </p>
+  </aside>
+
+  <footer>
+    <img src="img/ornamento.png" alt="" width="900" height="20">
+
+    <h2>Scalla Seller</h2>
+
+    <address>
+      Borda da Mata — MG<br>
+      E-mail: <a href="mailto:contato@scallaseller.com.br">contato@scallaseller.com.br</a>
+    </address>
+
+    <nav aria-label="Navegação do rodapé">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="catalogo.html">Catálogo de serviços</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <p><small>&copy; <time datetime="2026">2026</time> Scalla Seller. Todos os direitos reservados.</small></p>
+  </footer>
+
+</body>
+</html>

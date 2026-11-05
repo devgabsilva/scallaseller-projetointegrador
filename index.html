@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scalla Seller: agência de gestão de contas em Mercado Livre e Shopee, sediada em Borda da Mata, no Sul de Minas.">
+  <title>Scalla Seller | Gestão de marketplaces no Sul de Minas</title>
+</head>
+<body>
+
+  <!--
+    DECISÃO 1 — Skip link como primeiro elemento focável do body.
+    Quem navega por teclado ou leitor de tela encontra o cabeçalho e os 4 itens
+    de menu repetidos em TODAS as páginas. O skip link permite saltar esse bloco
+    e ir direto ao conteúdo. O tabindex="-1" no <main> é necessário porque, sem
+    ele, alguns navegadores movem o scroll mas não movem o foco do teclado.
+  -->
+  <a href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header>
+    <a href="index.html">
+      <!--
+        A logo é o link para a home. O alt descreve o DESTINO do link, não a
+        aparência da imagem: "logotipo azul" não ajudaria ninguém a navegar.
+      -->
+      <img src="img/logo-scalla-seller.png" alt="Scalla Seller — página inicial" width="240" height="60">
+    </a>
+
+    <!--
+      DECISÃO 2 — aria-label no <nav>. A página tem duas navegações (a principal
+      aqui e o sumário dentro do main). Sem rótulo, o leitor de tela anuncia
+      "navegação" duas vezes e o usuário não sabe qual é qual.
+    -->
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Início</a></li>
+        <li><a href="catalogo.html">Catálogo de serviços</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <h1>Scalla Seller: sua operação de marketplace conduzida por quem vive o dia a dia da plataforma</h1>
+
+    <p>
+      Somos uma agência de gestão de marketplaces sediada em Borda da Mata, no
+      Sul de Minas. Assumimos a conta do lojista no Mercado Livre e na Shopee de
+      ponta a ponta — da estruturação inicial à gestão contínua de anúncios,
+      preço e performance.
+    </p>
+
+    <nav aria-label="Sumário desta página">
+      <h2>Nesta página</h2>
+      <ul>
+        <li><a href="#o-que-fazemos">O que fazemos</a></li>
+        <li><a href="#para-quem">Para quem é</a></li>
+        <li><a href="#resultado">O que o cliente acompanha</a></li>
+        <li><a href="#proximo-passo">Próximo passo</a></li>
+      </ul>
+    </nav>
+
+    <section id="o-que-fazemos">
+      <h2>O que fazemos</h2>
+      <p>
+        Operamos a conta inteira, não apenas uma peça dela. São dois serviços que
+        se encaixam — um pontual, um recorrente.
+      </p>
+
+      <!--
+        <article> aqui é legítimo: cada serviço é uma oferta completa e
+        autocontida, que pode ser retirada desta página e reaproveitada numa
+        proposta comercial ou num anúncio sem perder sentido. É exatamente o
+        caso de uso que a especificação descreve para o elemento.
+      -->
+      <article>
+        <h3>Estruturação de loja</h3>
+        <p>
+          Serviço pontual, cobrado por marketplace. Deixa a conta em condição de
+          competir: catálogo cadastrado corretamente, preço calculado e anúncios
+          escritos para a busca da plataforma.
+        </p>
+        <p><a href="catalogo.html#estruturacao">Ver o que entra na estruturação</a></p>
+      </article>
+
+      <article>
+        <h3>Gestão mensal</h3>
+        <p>
+          Serviço recorrente, cobrado por conta. Depois da loja estruturada,
+          assumimos a operação do dia a dia: preço, campanhas de Ads, reputação
+          e indicadores.
+        </p>
+        <p><a href="catalogo.html#gestao">Ver o que entra na gestão mensal</a></p>
+      </article>
+    </section>
+
+    <section id="para-quem">
+      <h2>Para quem é</h2>
+      <p>Atendemos CNPJ de qualquer nicho, em dois cenários:</p>
+      <ul>
+        <li>
+          <strong>Já vende em marketplace e travou.</strong> A conta existe, tem
+          produto cadastrado, mas o faturamento não sai do lugar ou a margem sumiu.
+        </li>
+        <li>
+          <strong>Ainda não vende em marketplace.</strong> Loja física, atacado ou
+          varejo que quer abrir o canal digital sem montar um time interno para isso.
+        </li>
+      </ul>
+    </section>
+
+    <section id="resultado">
+      <h2>O que o cliente acompanha</h2>
+      <p>
+        Todo mês o lojista recebe um relatório com os números da conta e a
+        justificativa de cada decisão tomada no período.
+      </p>
+
+      <figure>
+        <img src="img/painel-vendas.png"
+             alt="Painel de desempenho de uma conta: faturamento de R$ 184 mil, 2.431 pedidos, ACOS de 9,4% e um gráfico de barras com evolução mensal de vendas em crescimento."
+             width="960" height="540">
+        <figcaption>
+          Exemplo de painel de acompanhamento mensal entregue ao cliente.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="proximo-passo">
+      <h2>Próximo passo</h2>
+      <p>
+        O diagnóstico inicial da conta é gratuito. Veja o
+        <a href="catalogo.html">catálogo de serviços e preços</a>, conheça
+        <a href="sobre.html">quem somos e como trabalhamos</a> ou
+        <a href="contato.html#formulario">solicite seu diagnóstico</a>.
+      </p>
+    </section>
+  </main>
+
+  <!--
+    <aside> como irmão do <main>, não dentro dele: o conteúdo é complementar
+    à PÁGINA inteira, não a uma seção específica do conteúdo principal.
+  -->
+  <aside aria-labelledby="titulo-canais">
+    <h2 id="titulo-canais">Canais que operamos</h2>
+    <dl>
+      <dt>Mercado Livre</dt>
+      <dd>Conta completa, incluindo Full e campanhas de Ads.</dd>
+
+      <dt>Shopee</dt>
+      <dd>Conta completa, incluindo programa de frete e Ads.</dd>
+
+      <dt>TikTok Shop</dt>
+      <dd>Em avaliação — ainda não faz parte do escopo contratado.</dd>
+    </dl>
+  </aside>
+
+  <footer>
+    <!--
+      Imagem puramente decorativa recebe alt="" (vazio, mas presente). Isso faz
+      o leitor de tela IGNORAR a imagem. Omitir o atributo teria efeito oposto:
+      o leitor leria o nome do arquivo em voz alta.
+    -->
+    <img src="img/ornamento.png" alt="" width="900" height="20">
+
+    <h2>Scalla Seller</h2>
+
+    <address>
+      Borda da Mata — MG<br>
+      E-mail: <a href="mailto:contato@scallaseller.com.br">contato@scallaseller.com.br</a>
+    </address>
+
+    <nav aria-label="Navegação do rodapé">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="catalogo.html">Catálogo de serviços</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <p><small>&copy; <time datetime="2026">2026</time> Scalla Seller. Todos os direitos reservados.</small></p>
+  </footer>
+
+</body>
+</html>
