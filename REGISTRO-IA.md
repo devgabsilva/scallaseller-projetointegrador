@@ -136,8 +136,7 @@ A frase do slogan foi para o fim do parágrafo de abertura: "Sua operação cond
 
 **Por que foi alterado:**
 
-Para comunicar a proposta da Scalla Seller de forma mais direta e facilitar a leitura. O título resume a mensagem principal; os detalhes ficam no parágrafo de apoio. É uma melhoria de clareza, não uma obrigação do HTML.
-
+O título anterior juntava o nome da marca com um slogan longo. Como o `h1` deve dizer do que a página trata, deixei nele só a proposta principal, "Gestão de marketplaces para Mercado Livre e Shopee", e levei o slogan para o fim do parágrafo de abertura. A mudança melhora a clareza da leitura; não corrige uma obrigação do HTML.
 ---
 
 ### Alteração 2 — Tag `<time>` no copyright (os 4 arquivos)
@@ -156,8 +155,7 @@ Para comunicar a proposta da Scalla Seller de forma mais direta e facilitar a le
 
 **Por que foi alterado:**
 
-Apenas simplificação
-
+A tag `<time>` serve para marcar datas ou horas que um programa consiga interpretar. O ano do copyright é apenas um texto fixo do rodapé, então a tag não acrescentava informação útil. Removi para simplificar o código, sem mudar o que aparece na página.
 ---
 
 ### Alteração 3 — `<article>` nas etapas do método (`sobre.html`)
@@ -186,8 +184,7 @@ Removi o `<article>` das 7 etapas. Os `<article>` dos sócios ficaram.
 
 **Por que foi alterado:**
 
-Porque <article> representa um conteúdo completo e independente, que poderia ser reutilizado separadamente. Quando a etapa depende das demais para explicar o método, essa independência não existe. Nesse caso, usar <li> dentro de uma lista ordenada <ol> expressa melhor a sequência do processo. Ter um título próprio, sozinho, não torna a etapa um artigo. html.spec.whatwg.org
-
+O `<article>` representa um conteúdo completo e independente, que poderia ser reaproveitado separadamente. Uma etapa como "Precificação" depende das outras para explicar o método, então essa independência não existe, e ter um título próprio não basta para torná-la um artigo. Dentro de uma lista ordenada `<ol>`, o `<li>` já expressa a sequência do processo. Os `<article>` dos sócios permaneceram, porque cada sócio é um conteúdo autônomo. ([especificação do HTML](https://html.spec.whatwg.org/multipage/sections.html#the-article-element))
 ---
 ## 4. Validação independente
 
