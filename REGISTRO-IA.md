@@ -15,6 +15,8 @@
 | **Ferramentas de IA** | **Claude** (Anthropic): gerou e corrigiu o site e a primeira versão deste registro<br>**ChatGPT** (OpenAI): sugeriu melhorias de redação e organização deste registro |
 | **Base** | Seção 5 do enunciado do Projeto Integrador |
 
+**Conteúdo:** [1. Mapeamento de uso](#1-mapeamento-de-uso) · [2. O que a IA fez](#2-o-que-a-ia-fez) · [3. Revisão técnica](#3-revisão-técnica--alterações-feitas-por-mim) · [4. Validação](#4-validação-independente) · [Apêndice A. Prompts](#apêndice-a--prompts-na-íntegra)
+
 ## Resumo em 30 segundos
 
 | | |
@@ -94,17 +96,17 @@ A distinção entre **fatos** (meus) e **redação** (da IA) importa, por isso f
 > Feitas pela ferramenta na própria saída, depois dos meus pedidos de revisão.
 > **Não fazem parte da minha revisão técnica** (seção 3).
 
-| Erro na versão gerada | Correção |
-|---|---|
-| Formulário com `method="post"`: o GitHub Pages recusa POST (erro 405) | `method` no padrão (GET) até haver back-end |
-| Comentário errado sobre `<h3>` dentro de `<summary>` | `<h3>` removido e comentário corrigido |
-| WhatsApp de exemplo que podia ser de uma pessoa real | Trocado por número fictício; depois, o meu número real |
-| Compromissos comerciais e funções do sócio inventados pela IA (prazo de resposta, diagnóstico grátis, atendimento aos sábados etc.) | Removidos ou trocados por texto neutro |
-| Legenda do painel parecia resultado real de cliente | Marcado como ilustrativo, números fictícios |
-| Método 360 com 6 frentes em vez de 7 | Frente "Ads" adicionada |
-| Imagens sem acento ("Gestao", "Evolucao") | Imagens geradas de novo |
-| Cada pergunta do FAQ num `<article>` sem heading (W3C: "Article lacks heading") | `<article>` único envolvendo o FAQ |
-| Home e README com detalhes inventados ou desatualizados | Textos igualados à página Sobre |
+| # | Onde | Problema na versão gerada | Correção |
+|:-:|---|---|---|
+| 1 | `contato.html` | Formulário com `method="post"`: o GitHub Pages recusa POST (erro 405) | `method` no padrão (GET) até haver back-end |
+| 2 | `contato.html` | Comentário errado sobre `<h3>` dentro de `<summary>` | `<h3>` removido e comentário corrigido |
+| 3 | `contato.html` | WhatsApp de exemplo que podia ser de uma pessoa real | Trocado por número fictício e, depois, pelo meu número real |
+| 4 | Todas as páginas | Compromissos comerciais e funções do sócio inventados pela IA (prazo de resposta, diagnóstico grátis, atendimento aos sábados etc.) | Removidos ou trocados por texto neutro |
+| 5 | `index.html` | Legenda do painel parecia resultado real de cliente | Marcado como ilustrativo, com números fictícios |
+| 6 | `sobre.html` | Método 360 com 6 frentes em vez de 7 | Frente "Ads" adicionada |
+| 7 | `img/` | Imagens sem acento ("Gestao", "Evolucao") | Imagens geradas de novo |
+| 8 | `contato.html` | Cada pergunta do FAQ num `<article>` sem heading (W3C: "Article lacks heading") | Um único `<article>` envolvendo o FAQ |
+| 9 | `index.html`, `README.md` | Detalhes inventados ou desatualizados | Textos igualados à página Sobre |
 
 **Autoria dos commits:** os quatro primeiros commits da branch foram feitos pela
 ferramenta com o meu usuário do git, sem marcação de coautoria. Depois deles, os
@@ -187,16 +189,16 @@ commits da IA trazem `Co-Authored-By: Claude`. Os commits da seção 3 são só 
 
 ## 4. Validação independente
 
-Além da revisão manual, o código passou por verificação automatizada:
+Além da revisão manual, o código passou por verificação automatizada.
 
-- **W3C Nu HTML Checker** (`vnu.jar`), rodado direto nas 4 páginas:
-  *"Document checking completed. No errors found."* O único aviso é informativo,
-  sobre o suporte do atributo `inputmode` em navegadores antigos.
-- **Nova rodada depois das minhas 3 alterações** (05/11/2026): o `vnu.jar` voltou
-  a dar *"No errors found"* nas 4 páginas, com o mesmo aviso informativo.
-- **Script de verificação estrutural** — hierarquia de headings, âncoras
-  quebradas, `alt` ausente, `label` órfão, `th` sem `scope`, `id` duplicado,
-  `aria-current` incorreto e presença indevida de CSS/JS. Nenhuma falha.
+| Verificação | Escopo | Resultado |
+|---|---|---|
+| **W3C Nu HTML Checker** (`vnu.jar`) | As 4 páginas | *"Document checking completed. No errors found."* Só um aviso informativo, sobre o suporte do atributo `inputmode` em navegadores antigos |
+| **W3C Nu HTML Checker**, nova rodada depois das minhas 3 alterações (05/11/2026) | As 4 páginas | *"No errors found"*, com o mesmo aviso informativo |
+| **Script de verificação estrutural** | Hierarquia de headings, âncoras quebradas, `alt` ausente, `label` órfão, `th` sem `scope`, `id` duplicado, `aria-current` incorreto e presença indevida de CSS ou JS | Nenhuma falha |
+| **Teste de navegação por teclado** | Skip link, ordem do Tab e validação nativa do formulário | Funcionando |
+
+> Essas verificações automatizadas não substituem a revisão manual de acessibilidade nem a minha revisão técnica (seção 3).
 
 ---
 
@@ -244,3 +246,11 @@ LEIA O CONTEXTO E FACA
 | 13 | Esclarecer que a IA devia melhorar o que eu escrevi | `voce que vai fazer, to falando pra melhorar as coisas que eu escrevi etc` | Sugestões de redação e organização; sem mexer no código nem na seção 3 |
 
 > **Pendente de completar:** os prompts em que pedi ao Claude orientação sobre as alterações da revisão técnica serão acrescentados aqui, com o texto exato, antes da entrega.
+
+---
+
+## Declaração
+
+Declaro que este registro descreve o uso de ferramentas de IA nesta entrega conforme o histórico acima: o que foi gerado por IA, o que foi fornecido por mim e o que fiz sozinho. Pontos ainda pendentes estão sinalizados no próprio documento.
+
+**Gabriel Silva Machado** · RA 98039075 · 05/11/2026
