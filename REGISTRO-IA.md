@@ -116,77 +116,79 @@ commits da IA trazem `Co-Authored-By: Claude`. Os commits da seção 3 são só 
 
 ## 3. Revisão Técnica — alterações feitas por mim
 
-> **ESTA SEÇÃO AINDA PRECISA SER PREENCHIDA POR MIM, GABRIEL.**
->
-> Não foi gerada por IA, de propósito: o enunciado avalia justamente a minha
-> capacidade de auditar o código. Preencher isto com texto gerado seria
-> exatamente o que a seção 5 quer evitar. Vale 15% da nota e sustenta a defesa
-> final.
->
-> **O que fazer:** escolher no mínimo 3 dos pontos de `PONTOS-PARA-REVISAO.md`,
-> **alterar o código de fato** e documentar cada alteração no formato abaixo.
-> Depois, apagar este bloco de aviso.
+Fiz as três alterações diretamente no código, pelo GitHub, e conferi o resultado depois de cada uma.
 
-### Alteração 1
+### Alteração 1 — Título e parágrafo da página inicial (`index.html`)
 
 **O que a IA gerou:**
 
 ```html
-
+<h1>Scalla Seller: sua operação de marketplace conduzida por quem vive o dia a dia da plataforma</h1>
 ```
 
 **O que foi alterado:**
 
 ```html
-
+<h1>Gestão de marketplaces para Mercado Livre e Shopee</h1>
 ```
+
+A frase do slogan foi para o fim do parágrafo de abertura: "Sua operação conduzida por quem vive o dia a dia da plataforma."
 
 **Por que foi alterado:**
 
-
+Para comunicar a proposta da Scalla Seller de forma mais direta e facilitar a leitura. O título resume a mensagem principal; os detalhes ficam no parágrafo de apoio. É uma melhoria de clareza, não uma obrigação do HTML.
 
 ---
 
-### Alteração 2
+### Alteração 2 — Tag `<time>` no copyright (os 4 arquivos)
 
 **O que a IA gerou:**
 
 ```html
-
+<p><small>&copy; <time datetime="2026">2026</time> Scalla Seller. Todos os direitos reservados.</small></p>
 ```
 
 **O que foi alterado:**
 
 ```html
-
+<p><small>&copy; 2026 Scalla Seller. Todos os direitos reservados.</small></p>
 ```
 
 **Por que foi alterado:**
 
-
+Apenas simplificação
 
 ---
 
-### Alteração 3
+### Alteração 3 — `<article>` nas etapas do método (`sobre.html`)
 
 **O que a IA gerou:**
 
 ```html
-
+<li>
+  <article>
+    <h3>Onboarding</h3>
+    <p>Levantamento do catálogo...</p>
+  </article>
+</li>
 ```
 
 **O que foi alterado:**
 
 ```html
-
+<li>
+  <h3>Onboarding</h3>
+  <p>Levantamento do catálogo...</p>
+</li>
 ```
+
+Removi o `<article>` das 7 etapas. Os `<article>` dos sócios ficaram.
 
 **Por que foi alterado:**
 
-
+Porque <article> representa um conteúdo completo e independente, que poderia ser reutilizado separadamente. Quando a etapa depende das demais para explicar o método, essa independência não existe. Nesse caso, usar <li> dentro de uma lista ordenada <ol> expressa melhor a sequência do processo. Ter um título próprio, sozinho, não torna a etapa um artigo. html.spec.whatwg.org
 
 ---
-
 ## 4. Validação independente
 
 Além da revisão manual, o código passou por verificação automatizada.
