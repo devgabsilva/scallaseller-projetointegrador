@@ -218,46 +218,29 @@ Enviar o link do repositório [GitHub](https://github.com/), a entrega deve corr
 LEIA O CONTEXTO E FACA
 ```
 
-### Prompts de ajuste e revisão
+### Prompts seguintes
 
-**Prompt 2.** Não foi texto digitado: a ferramenta perguntou o tema e eu cliquei em
-`Scalla Seller — agência de marketplaces`.
+> A coluna **"Em resumo"** é uma síntese minha, só para facilitar a leitura. O que vale como registro é a coluna **"Texto original"**, copiada sem correção.
 
-**Prompt 3.** `faça com que entre na sugestão do tema, dentro do que ele propôs`
-Resultado: site reorganizado para a sugestão 2 do enunciado (pequeno negócio local).
-
-**Prompt 4.** `QUERO QUE REVISE E PROCURE ERROS E Arrume, ja esta no github? me explica o que foi feito e como, quero saber explicar e como eu mostro? a onde eiu vejo?`
-Resultado: a IA corrigiu erros na própria saída (seção 2.1).
-
-**Prompt 5.** `WhatsApp coloca o meu 35 999681545` / `sobre minha parte que eu tinha que fazer esta tudo certo? esta em formato humanizado? esta tudo coerente?`
-Resultado: número real aplicado. A IA não redigiu a seção 3, que é minha.
-
-**Prompt 6.** `preciso que em pontos para revisao voce me liste os 3 mais faceis de fazer com explicacoes o codigo e um passo a passo de como fazer isso la, em que linha, qual parte etc`
-
-**Envio por engano.** Mandei duas imagens sem relação e escrevi `MANDEI ERRADO DESCONSIDERE, esqueça elas`.
-
-**Prompt 7.** `voce ja nao subiu no meu github? crie o repo como scallaseller-projetointegrador algo assim`
-Resultado: a IA não cria repositórios na minha conta; criei o repositório vazio.
-
-**Prompt 8.** `Criei` Resultado: a IA enviou as branches `entrega-1` e `main`.
-
-**Prompt 9.** `pronto, agora o que eu faco, me explique o codigo, como foi feito e como estao as coisas que eram partes minha?`
-
-**Prompt 10.** Apenas uma captura de tela (página 404 do GitHub Pages), sem texto.
-Resultado: a IA confirmou que o Pages não estava ativo e passou como ativar.
-
-**Prompt 11.** `preciso que recapitule comigo, estou perdido. O que eu vou ter que fazer, como eu envio pra ele? como ficou a documentacao? inventou um prompt que eu te mandei?`
-Resultado: a IA conferiu os prompts deste registro contra as minhas mensagens.
+| # | Em resumo, eu pedi | Texto original (como enviei) | Resultado |
+|:-:|---|---|---|
+| 2 | Escolher o tema do site | Cliquei na opção oferecida pela ferramenta: `Scalla Seller — agência de marketplaces` | Tema definido |
+| 3 | Ajustar o site ao modelo de tema do enunciado | `faça com que entre na sugestão do tema, dentro do que ele propôs` | Site reorganizado para a sugestão 2 (pequeno negócio local) |
+| 4 | Revisar o código, corrigir erros e me explicar para eu saber apresentar | `QUERO QUE REVISE E PROCURE ERROS E Arrume, ja esta no github? me explica o que foi feito e como, quero saber explicar e como eu mostro? a onde eiu vejo?` | Erros corrigidos (seção 2.1) |
+| 5 | Usar meu WhatsApp real e conferir a minha parte | `WhatsApp coloca o meu 35 999681545`<br>`sobre minha parte que eu tinha que fazer esta tudo certo? esta em formato humanizado? esta tudo coerente?` | Número aplicado; a IA não redigiu a seção 3 |
+| 6 | Listar os 3 pontos mais fáceis para eu revisar, com o passo a passo | `preciso que em pontos para revisao voce me liste os 3 mais faceis de fazer com explicacoes o codigo e um passo a passo de como fazer isso la, em que linha, qual parte etc` | Três pontos indicados, com a localização |
+| — | Ignorar duas imagens enviadas por engano | `MANDEI ERRADO DESCONSIDERE, esqueça elas` | Desconsideradas |
+| 7 | Subir o projeto para o meu GitHub | `voce ja nao subiu no meu github? crie o repo como scallaseller-projetointegrador algo assim` | A IA não cria repositórios na minha conta; criei o vazio |
+| 8 | Avisar que o repositório estava criado | `Criei` | Branches `entrega-1` e `main` enviadas |
+| 9 | Entender o código e o que era parte minha | `pronto, agora o que eu faco, me explique o codigo, como foi feito e como estao as coisas que eram partes minha?` | Código explicado página por página |
+| 10 | Mostrar o erro do GitHub Pages | Apenas uma captura de tela (404 do Pages), sem texto | Pages não estava ativo; passo a passo para ativar |
+| 11 | Recapitular o que faltava e conferir se a IA inventou prompts | `preciso que recapitule comigo, estou perdido. O que eu vou ter que fazer, como eu envio pra ele? como ficou a documentacao? inventou um prompt que eu te mandei?` | Registro conferido contra as minhas mensagens |
 
 ### Prompts ao ChatGPT (melhoria deste registro)
 
-**Prompt 12.** `melhore isso e faca um prompt paranque eu coloque em registro ia e deixe ainda o que ela fez anotado`
-Depois dele enviei o conteúdo deste registro como material para revisão.
+| # | Em resumo, eu pedi | Texto original (como enviei) | Resultado |
+|:-:|---|---|---|
+| 12 | Melhorar o registro e manter anotado o que a IA fez | `melhore isso e faca um prompt paranque eu coloque em registro ia e deixe ainda o que ela fez anotado` | Depois enviei o registro como material |
+| 13 | Esclarecer que a IA devia melhorar o que eu escrevi | `voce que vai fazer, to falando pra melhorar as coisas que eu escrevi etc` | Sugestões de redação e organização; sem mexer no código nem na seção 3 |
 
-**Prompt 13.** `voce que vai fazer, to falando pra melhorar as coisas que eu escrevi etc`
-Resultado: o ChatGPT sugeriu melhorias de redação e de organização. Ele não mexeu
-no código do site e não escreveu a seção 3.
-
-> **Pendente de completar:** os prompts em que pedi ao Claude orientação sobre as
-> alterações da revisão técnica serão acrescentados aqui, com o texto exato,
-> antes da entrega.
+> **Pendente de completar:** os prompts em que pedi ao Claude orientação sobre as alterações da revisão técnica serão acrescentados aqui, com o texto exato, antes da entrega.
