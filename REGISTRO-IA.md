@@ -1,58 +1,72 @@
-# Registro de Uso de IA — Entrega 1
+<div align="center">
 
-**Projeto:** Scalla Seller — site institucional de agência de marketplaces
-**Aluno:** Gabriel Silva Machado — RA 98039075
-**Entrega:** 1 — Esqueleto Semântico (`entrega-1`)
-**Ferramentas utilizadas:** Claude (Anthropic), para gerar e corrigir o site e para a primeira versão deste registro; ChatGPT (OpenAI), apenas para melhorar a redação e a organização deste registro (prompts 12 e 13)
-**Data:** 05/11/2026
+# Registro de Uso de IA
 
-> Documento exigido pela seção 5 do enunciado do Projeto Integrador.
+**Projeto Integrador · Interface Web com HTML e CSS**
+**Entrega 1 — Esqueleto Semântico** · branch `entrega-1`
+
+</div>
+
+| | |
+|---|---|
+| **Projeto** | Scalla Seller — site institucional de agência de marketplaces |
+| **Aluno** | Gabriel Silva Machado · RA 98039075 · UNIVÁS, Sistemas de Informação |
+| **Data** | 05/11/2026 |
+| **Ferramentas de IA** | **Claude** (Anthropic): gerou e corrigiu o site e a primeira versão deste registro<br>**ChatGPT** (OpenAI): sugeriu melhorias de redação e organização deste registro |
+| **Base** | Seção 5 do enunciado do Projeto Integrador |
+
+## Resumo em 30 segundos
+
+| | |
+|---|---|
+| 🤖 **A IA fez** | As 4 páginas HTML, as imagens provisórias, o README e a primeira versão deste registro |
+| 👤 **Eu fiz** | Os dados reais da empresa, a decisão do tema, a conferência do que foi gerado e **3 alterações no código**, cada uma com a minha justificativa (seção 3) |
+| ✅ **Verificado** | W3C Nu HTML Checker sem erros nas 4 páginas, depois das minhas alterações (seção 4) |
 
 ---
 
-## 1. Mapeamento de Uso
+## 1. Mapeamento de uso
 
-### Código e arquivos
+### 1.1 Código e arquivos
 
-| Arquivo | Participação da IA | Observação |
-|---|---|---|
-| `index.html` | **Integral** | Estrutura e redação geradas por IA a partir do briefing |
-| `catalogo.html` | **Integral** | Idem |
-| `sobre.html` | **Integral** | Idem |
-| `contato.html` | **Integral** | Idem |
+| Arquivo ou atividade | Participação da IA | Observação |
+|---|:---:|---|
+| `index.html`, `catalogo.html`, `sobre.html`, `contato.html` | **Integral** | Estrutura e redação geradas a partir do meu briefing |
 | `img/*.png` | **Integral** | Imagens provisórias geradas por script Python (Pillow) |
-| `README.md` | **Integral** | Idem |
-| Este arquivo (seções 1, 2 e 4) | **Integral** | Escritas pelo Claude; o ChatGPT foi usado depois só para sugerir melhorias de redação e organização |
-| Identificação dos pontos de revisão | **Integral** | A IA apontou pontos discutíveis no próprio código e um roteiro de onde alterar (prompt 6) |
-| **Alterações da revisão técnica** | **Nenhuma** | A meu cargo: feitas por mim, direto no código, em commits meus |
-| **Este arquivo (seção 3)** | **Nenhuma** | A meu cargo: justificativas escritas por mim |
+| `README.md` | **Integral** | Gerado e corrigido pela IA |
+| Este registro (seções 1, 2 e 4) | **Integral** | Escritas pelo Claude; o ChatGPT sugeriu depois melhorias de redação e organização |
+| Pontos de revisão | **Integral** | A IA apontou pontos discutíveis no próprio código e onde alterar (prompt 6) |
+| **Alterações da revisão técnica** | **Nenhuma** | Feitas por mim, direto no código, em commits meus |
+| **Seção 3 deste registro** | **Nenhuma** | Justificativas escritas por mim |
 
-### Conteúdo do site
+### 1.2 Origem do conteúdo do site
 
-Aqui há duas origens diferentes, e a distinção importa:
+A distinção entre **fatos** (meus) e **redação** (da IA) importa, por isso fica separada.
 
-**Dados fornecidos por mim (informação real da empresa):**
+**Fatos fornecidos por mim (informação real da empresa)**
+
 - Nome da agência, sócios e paleta azul e branco.
-- Os dois serviços (estruturação e gestão mensal) e as 7 frentes do
-  acompanhamento 360: onboarding, pesquisa de mercado, precificação, anúncios,
-  criativos, Ads e gestão contínua.
+- Os dois serviços (estruturação e gestão mensal) e as 7 frentes do acompanhamento 360: onboarding, pesquisa de mercado, precificação, anúncios, criativos, Ads e gestão contínua.
 - Canais: Mercado Livre e Shopee; TikTok Shop fora do escopo atual.
 - Todos os preços das tabelas.
 - Condições: sem limite de SKUs; verba de Ads paga pelo cliente.
 - Público: CNPJ de qualquer nicho, já vendendo ou começando.
 - WhatsApp de contato: (35) 99968-1545.
 
-**Redigido pela IA, a ser confirmado por mim antes de o site ir ao ar de verdade:**
+**Redigido pela IA, a confirmar por mim antes de o site ir ao ar de verdade**
+
 - Todo o texto corrido (a redação das frases, não os fatos acima).
 - O detalhamento das listas "O que entra" de cada serviço, no catálogo.
 - Localização em Borda da Mata e horário de segunda a sexta, das 8h às 18h.
 - Relatório mensal de acompanhamento para o cliente.
-- Itens de "O que não está incluso" além da verba de Ads (logística, estoque e
-  atendimento ao comprador final).
-- Os números do painel ilustrativo (R$ 184 mil, 2.431 pedidos, ACOS de 9,4%),
-  que são **fictícios** e estão identificados assim na própria página.
-- **E-mail provisório:** `contato@scallaseller.com.br` é um exemplo até a
-  agência ter o endereço oficial.
+- Itens de "O que não está incluso" além da verba de Ads (logística, estoque e atendimento ao comprador final).
+
+**Provisório ou fictício, já identificado como tal**
+
+| Item | Situação |
+|---|---|
+| Painel com R$ 184 mil, 2.431 pedidos e ACOS de 9,4% | Números **fictícios**, avisados na própria página |
+| `contato@scallaseller.com.br` | E-mail de exemplo, até a agência ter o endereço oficial |
 
 ---
 
@@ -75,7 +89,7 @@ Aqui há duas origens diferentes, e a distinção importa:
 
 ---
 
-## 2.1 Correções feitas pela própria IA (prompts 4 e 5)
+### 2.1 Correções feitas pela própria IA (prompts 4 e 5)
 
 > Feitas pela ferramenta na própria saída, depois dos meus pedidos de revisão.
 > **Não fazem parte da minha revisão técnica** (seção 3).
